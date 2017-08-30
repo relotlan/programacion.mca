@@ -9,13 +9,14 @@ package mcamatematicas;
  *
  * @author Lenovo Unee G40
  */
+import java.math.BigInteger;
 import java.util.*;
 
 public class EratostenesNumPrim2 {
 
     public static void main(String[] args) {
         Scanner ob = new Scanner(System.in);
-        int mov = 0;
+        BigInteger mov = new BigInteger("0");
 
         System.out.println("Introduce el número de discos a acomodar"); 
         int discos = ob.nextInt();
