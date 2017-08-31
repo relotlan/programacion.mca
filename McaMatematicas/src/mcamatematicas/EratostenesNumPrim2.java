@@ -21,7 +21,7 @@ public class EratostenesNumPrim2 {
         System.out.println("Introduce el número de discos a acomodar"); 
         int discos = ob.nextInt();
 
-        mov = (int) (Math.pow(2, discos)) - 1;
+        mov = mov.modPow(new BigInteger(Integer.toString(2)), new BigInteger(Integer.toString(discos))).add(new BigInteger(Integer.toString(1)));
         System.out.println(mov);
     }
 }
