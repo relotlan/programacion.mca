@@ -11,25 +11,36 @@ package McaProgramacion;
  */
 
 import java.util.*;
+
 public class Tarea_RaizC {
-    
-    public static double raizC(int x){
-        double con=0, ac=1.0;
-        while(con==ac){
-        con =x/ac;
-        ac++;
-        }
-        
-        return con;
-    }
-    
+
+    /**
+     * @param args the command line arguments
+     */
     public static void main(String[] args) {
-        int numero;
+        // TODO code application logic here
+        double aux = 0, aux2;
         Scanner ob = new Scanner(System.in);
-        System.out.println("Introduce un número entero para calcular su raiz cuadrada por favor");
-        numero = ob.nextInt();
-        
-        System.out.println("Su raiz es: "+raizC(numero));
+
+        System.out.println("Introduce el numero que quieres calcular su raiz cuadrada");
+        double num = ob.nextInt();
+
+        while ((aux * aux) < num) {
+            aux++;
+        }
+
+        if ((aux * aux) == num) {
+            System.out.println(aux);
+        } else {
+            aux2 = aux - 1;
+            while ((aux2 * aux2) < num) {
+                aux2 += 0.0001;
+            }
+            System.out.println(aux2-0.0001);
+
+        }
     }
-    
+
 }
+
+
